@@ -58,8 +58,8 @@
   .bn{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:-.01em;color:var(--ink)}
   .nav-links{display:flex;gap:26px;font-size:14.5px;color:var(--ink-soft)}
   .nav-links a:hover{color:var(--emerald)}
-  .nav-cta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--emerald);border:1px solid var(--emerald);padding:8px 15px;border-radius:999px;transition:.2s}
-  .nav-cta:hover{background:var(--emerald);color:#fff}
+  .nav-cta{font-family:var(--mono);font-size:12.5px;letter-spacing:.04em;color:var(--emerald);background:rgba(255,255,255,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(0,147,208,.5);padding:8px 16px;border-radius:999px;transition:.25s cubic-bezier(.2,.7,.2,1);box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+  .nav-cta:hover{background:var(--emerald);color:#fff;border-color:var(--emerald);box-shadow:0 10px 22px -10px rgba(0,147,208,.7)}
   @media(max-width:720px){.nav-links{display:none}}
 
   header{background:linear-gradient(158deg,#062A4C 0%,#06213B 52%,#04182C 100%);color:#EAF2FA;padding:52px 0 60px;position:relative;overflow:hidden}
@@ -97,19 +97,19 @@
   .netrail{margin:56px 0 0}
   .net-stations{display:grid;grid-template-columns:1fr 1fr 1fr;gap:22px}
   .net-col{text-align:center;position:relative;padding-bottom:34px}
-  .net-col .node{width:14px;height:14px;border-radius:50%;background:var(--emerald-bright);margin:0 auto 12px;box-shadow:0 0 0 5px rgba(46,139,106,.18);animation:pulse 3s ease-in-out infinite}
+  .net-col .node{width:14px;height:14px;border-radius:50%;background:var(--emerald-bright);margin:0 auto 12px;box-shadow:0 0 0 5px rgba(0,147,208,.22);animation:pulse 3s ease-in-out infinite}
   .net-col:nth-child(2) .node{animation-delay:.6s}
-  .net-col.core .node{background:var(--brass);box-shadow:0 0 0 5px rgba(194,150,60,.22);animation:beat 3s ease-in-out infinite 1.2s}
-  @keyframes pulse{0%,100%{box-shadow:0 0 0 5px rgba(46,139,106,.18)}50%{box-shadow:0 0 0 8px rgba(46,139,106,.08)}}
+  .net-col.core .node{background:var(--brass);box-shadow:0 0 0 5px rgba(224,166,60,.24);animation:beat 3s ease-in-out infinite 1.2s}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 5px rgba(0,147,208,.22)}50%{box-shadow:0 0 0 8px rgba(0,147,208,.09)}}
   @keyframes beat{0%,100%{box-shadow:0 0 0 5px rgba(194,150,60,.22)}50%{box-shadow:0 0 0 9px rgba(194,150,60,.10)}}
   .net-col .s-name{font-family:var(--display);font-weight:600;font-size:17px;color:#F3F8F4}
-  .net-col .s-role{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#8DA298;margin-top:5px;line-height:1.45}
-  .net-col::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:2px;height:22px;background:linear-gradient(180deg,rgba(141,162,152,.12),rgba(141,162,152,.5))}
-  .net-base{border-top:1px dashed rgba(141,162,152,.42);padding-top:13px;text-align:center}
-  .net-base .bl{font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#9FB2A9}
+  .net-col .s-role{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:#8FA8C0;margin-top:5px;line-height:1.45}
+  .net-col::after{content:"";position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:2px;height:22px;background:linear-gradient(180deg,rgba(147,170,196,.12),rgba(147,170,196,.5))}
+  .net-base{border-top:1px dashed rgba(147,170,196,.42);padding-top:13px;text-align:center}
+  .net-base .bl{font-family:var(--mono);font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:#9DB4C9}
 
   .readout{display:flex;flex-wrap:wrap;gap:10px;margin:40px 0 0;padding-bottom:70px}
-  .chip{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:#CBD8D1;border:1px solid rgba(255,255,255,.16);border-radius:6px;padding:8px 13px;display:flex;align-items:center;gap:8px}
+  .chip{font-family:var(--mono);font-size:12.5px;letter-spacing:.03em;color:#CFE0EE;background:rgba(255,255,255,.08);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:8px 14px;display:flex;align-items:center;gap:8px;box-shadow:inset 0 1px 0 rgba(255,255,255,.15)}
   .chip .dot{width:7px;height:7px;border-radius:50%;background:var(--emerald-bright)}
   .chip .dot.b{background:var(--brass)}
 
@@ -215,8 +215,8 @@
   .eco h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;margin:14px 0 30px;max-width:24ch;color:#F3F8F4}
   .eco-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   @media(max-width:760px){.eco-cols{grid-template-columns:1fr}}
-  .eco-card{border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:24px;transition:border-color .3s,transform .3s}
-  .eco-card:hover{border-color:rgba(194,150,60,.5);transform:translateY(-3px)}
+  .eco-card{background:rgba(255,255,255,.06);backdrop-filter:blur(14px) saturate(150%);-webkit-backdrop-filter:blur(14px) saturate(150%);border:1px solid var(--glass-line-dk);border-radius:18px;padding:24px;transition:border-color .3s,transform .3s,box-shadow .3s;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+  .eco-card:hover{border-color:rgba(53,180,234,.6);transform:translateY(-3px);box-shadow:0 24px 50px -28px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.16)}
   .eco-card .tag{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--brass)}
   .eco-card h3{font-family:var(--display);font-weight:600;font-size:20px;margin:9px 0 8px;color:#F3F8F4}
   .eco-card p{font-size:14.5px;color:#AEBFB7}
@@ -228,15 +228,16 @@
   .clients .sub{color:var(--muted);font-size:15px;margin-bottom:30px;max-width:52ch}
   .client-cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
   @media(max-width:760px){.client-cols{grid-template-columns:1fr}}
-  .client-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px 26px 28px;box-shadow:0 1px 0 rgba(14,38,33,.04);transition:transform .3s,box-shadow .3s}
-  .client-card:hover{transform:translateY(-4px);box-shadow:0 20px 42px -30px rgba(14,38,33,.5)}
+  .client-card{background:var(--glass-strong);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid var(--glass-line);border-radius:20px;padding:26px 26px 28px;box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.75);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column;min-height:210px}
+  .client-card .c-line{margin-top:auto}
+  .client-card:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(0,92,185,.5),inset 0 1px 0 rgba(255,255,255,.8)}
   .c-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
   .c-name{font-family:var(--display);font-weight:700;font-size:24px;color:var(--ink);letter-spacing:-.01em}
   .c-scale{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.04em}
   .c-prods{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 4px}
   .pp{font-family:var(--mono);font-size:11.5px;letter-spacing:.03em;padding:5px 11px;border-radius:999px;border:1px solid var(--line);color:var(--muted);background:var(--paper)}
   .pp.on{background:var(--emerald);border-color:var(--emerald);color:#fff}
-  .client-card .c-line{font-size:15px;color:var(--ink-soft);margin-top:14px}
+  .client-card .c-line{font-size:15px;color:var(--ink-soft);margin-top:auto;padding-top:14px}
   .client-card .c-line b{color:var(--ink);font-weight:600}
 
   .voices{padding:64px 0 8px}
@@ -244,11 +245,11 @@
   .voices h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;margin:14px 0 30px;max-width:22ch;color:var(--ink)}
   .voice-cols{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
   @media(max-width:820px){.voice-cols{grid-template-columns:1fr}}
-  .voice{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;position:relative;transition:transform .3s}
-  .voice:hover{transform:translateY(-4px)}
-  .voice .qm{font-family:var(--display);font-weight:700;font-size:46px;line-height:1;color:var(--brass);opacity:.35}
+  .voice{background:var(--glass-strong);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid var(--glass-line);border-radius:20px;padding:26px;position:relative;transition:transform .3s,box-shadow .3s;box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.7);display:flex;flex-direction:column;min-height:240px}
+  .voice:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(0,92,185,.5),inset 0 1px 0 rgba(255,255,255,.8)}
+  .voice .qm{font-family:var(--display);font-weight:700;font-size:46px;line-height:1;color:var(--brass);opacity:.55}
   .voice p{font-size:15.5px;color:var(--ink-soft);margin:6px 0 18px}
-  .voice .who{display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:15px}
+  .voice .who{display:flex;align-items:center;gap:11px;border-top:1px solid var(--line);padding-top:15px;margin-top:auto}
   .voice .av{width:34px;height:34px;border-radius:50%;background:var(--emerald);color:#fff;font-family:var(--display);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;flex:0 0 auto}
   .voice .av.b{background:var(--brass)}
   .voice .nm{font-family:var(--display);font-weight:600;font-size:14.5px;color:var(--ink)}
@@ -258,8 +259,8 @@
   .cta .eyebrow{color:var(--brass-deep)}
   .cta h2{font-family:var(--display);font-weight:600;font-size:clamp(26px,3.6vw,40px);letter-spacing:-.02em;margin:14px auto 10px;max-width:22ch}
   .cta p{color:var(--ink-soft);max-width:46ch;margin:0 auto 30px}
-  .btn{display:inline-block;font-family:var(--mono);font-size:14px;letter-spacing:.03em;background:var(--emerald);color:#fff;padding:15px 30px;border-radius:999px;transition:.2s}
-  .btn:hover{background:var(--ink);transform:translateY(-1px)}
+  .btn{display:inline-block;font-family:var(--mono);font-size:14px;letter-spacing:.03em;background:linear-gradient(180deg,var(--emerald-bright),var(--emerald) 55%,var(--brass-deep) 260%);color:#fff;padding:16px 32px;border-radius:999px;transition:.25s cubic-bezier(.2,.7,.2,1);box-shadow:0 16px 34px -14px rgba(0,147,208,.7),inset 0 1px 0 rgba(255,255,255,.45)}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 22px 44px -14px rgba(0,147,208,.8),inset 0 1px 0 rgba(255,255,255,.55)}
 
   footer{border-top:1px solid var(--line);padding:30px 0;font-size:13px;color:var(--muted)}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
@@ -281,6 +282,49 @@
   .shot .wbar i{width:8px;height:8px;border-radius:50%;background:#cfd6dd;display:inline-block}
   .shot img{display:block;width:100%;height:auto}
   .shots{display:grid;gap:16px}
+
+  /* carrusel */
+  .gallery{padding:58px 0 12px}
+  .gallery .g-head{max-width:52ch;margin-bottom:22px}
+  .gallery h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;margin:11px 0 8px;color:var(--ink)}
+  .gallery .g-head p{color:var(--muted);font-size:15px}
+  .carousel{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--glass-line);box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.5)}
+  .car-track{display:flex;transition:transform .7s cubic-bezier(.2,.7,.2,1);will-change:transform}
+  .slide{min-width:100%;position:relative;aspect-ratio:16/9;overflow:hidden}
+  .slide img{width:100%;height:100%;object-fit:cover;display:block}
+  .slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,33,59,0) 45%,rgba(6,33,59,.72) 100%),linear-gradient(90deg,rgba(6,33,59,.35),transparent 45%);pointer-events:none}
+  .slide .cap{position:absolute;z-index:2;left:22px;bottom:20px;right:80px;color:#fff}
+  .slide .cap .ck{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9BD8F4}
+  .slide .cap .ct{font-family:var(--display);font-weight:600;font-size:clamp(17px,2.4vw,23px);letter-spacing:-.01em;margin-top:5px;max-width:24ch}
+  .car-btn{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#fff;background:rgba(255,255,255,.16);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);border:1px solid rgba(255,255,255,.4);box-shadow:0 10px 26px -12px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.5);transition:.2s;font-size:18px;line-height:1}
+  .car-btn:hover{background:rgba(255,255,255,.3);transform:translateY(-50%) scale(1.06)}
+  .car-btn.prev{left:16px}.car-btn.next{right:16px}
+  .car-dots{position:absolute;z-index:4;bottom:18px;right:22px;display:flex;gap:8px}
+  .car-dots b{width:8px;height:8px;border-radius:999px;background:rgba(255,255,255,.45);cursor:pointer;transition:.3s;border:none;padding:0}
+  .car-dots b.on{width:26px;background:#fff}
+  @media(max-width:620px){.slide .cap{right:22px}.car-btn{width:36px;height:36px}}
+
+  /* dolores -> solucion */
+  .pains{padding:66px 0 8px}
+  .pains .p-head{max-width:26ch;margin-bottom:28px}
+  .pains h2{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.4vw,34px);letter-spacing:-.01em;margin:11px 0 8px;color:var(--ink)}
+  .pains .p-head p{color:var(--muted);font-size:15px;max-width:52ch}
+  .pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media(max-width:800px){.pain-grid{grid-template-columns:1fr}}
+  .pain-card{background:var(--glass-strong);backdrop-filter:blur(18px) saturate(180%);-webkit-backdrop-filter:blur(18px) saturate(180%);border:1px solid var(--glass-line);border-radius:20px;padding:24px;box-shadow:var(--glass-shadow),inset 0 1px 0 rgba(255,255,255,.75);transition:transform .3s,box-shadow .3s;display:flex;flex-direction:column}
+  .pain-card:hover{transform:translateY(-4px);box-shadow:0 28px 56px -28px rgba(0,92,185,.5),inset 0 1px 0 rgba(255,255,255,.8)}
+  .pr-row{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start}
+  .pr-ic{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;flex:0 0 auto;font-size:15px;font-weight:700;line-height:1}
+  .pr-ic.pain{background:rgba(224,74,64,.12);color:#D6483C;border:1px solid rgba(224,74,64,.28)}
+  .pr-ic.sol{background:rgba(0,147,208,.12);color:var(--emerald);border:1px solid rgba(0,147,208,.3)}
+  .pr-lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:3px}
+  .pr-lbl.pain{color:#C0453B}.pr-lbl.sol{color:var(--emerald)}
+  .pr-txt{font-size:15px;color:var(--ink-soft);line-height:1.5}
+  .pr-txt b{color:var(--ink);font-weight:600}
+  .pr-div{display:flex;align-items:center;gap:10px;margin:16px 0}
+  .pr-div .ln{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent)}
+  .pr-div .dw{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+  .pr-tag{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--emerald);background:rgba(0,147,208,.08);border:1px solid rgba(0,147,208,.22);border-radius:999px;padding:5px 12px;align-self:flex-start;margin-top:16px}
 </style>
 </head>
 <body>
@@ -308,12 +352,12 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <span class="eyebrow hero-eyebrow">Diseñada en exclusiva para Farmacias Similares</span>
-      <h1>Toda tu cadena bajo control, <span class="em">en una sola plataforma.</span></h1>
-      <p class="hero-sub">Hecha a la medida del modelo de los franquiciatarios de Farmacias Similares. Livora reúne la operación financiera y el control de piso de toda tu red, y mide el desempeño de cada sucursal en tiempo real.</p>
+      <h1>Toda tu cadena de farmacias, <span class="em">en un solo lugar.</span></h1>
+      <p class="hero-sub">Livora junta el dinero y la operación de todas tus farmacias en una sola plataforma. Ves las ventas del día, los gastos y cómo va cada sucursal, sin tener que perseguir reportes.</p>
       <div class="readout">
-        <span class="chip"><span class="dot"></span>Datos en tiempo real</span>
-        <span class="chip"><span class="dot"></span>Multi-sucursal, multi-zona</span>
-        <span class="chip"><span class="dot b"></span>3 productos, un ecosistema</span>
+        <span class="chip"><span class="dot"></span>Todo al momento</span>
+        <span class="chip"><span class="dot"></span>Todas tus sucursales juntas</span>
+        <span class="chip"><span class="dot b"></span>Hecha para Farmacias Similares</span>
       </div>
     </div>
     <div class="hero-art">
@@ -338,16 +382,52 @@
 
 <section class="intro">
   <div class="wrap">
-    <p class="reveal">Una cadena de farmacias necesita dos cosas bajo control: el <span class="q">dinero</span> y la <span class="b">operación</span>. Livora resuelve las dos sobre la misma red — captura y consolida el flujo financiero, y audita el cumplimiento y el desempeño comercial de cada sucursal.</p>
+    <p class="reveal">Una cadena de farmacias necesita cuidar dos cosas: el <span class="q">dinero</span> y la <span class="b">operación</span>. Livora te ayuda con las dos — junta las ventas y los gastos de cada sucursal, y te muestra cuáles están cumpliendo y cuáles necesitan atención.</p>
+  </div>
+</section>
+
+<section class="pains">
+  <div class="wrap">
+    <div class="p-head reveal">
+      <span class="eyebrow">Lo que quita el sueño</span>
+      <h2>Del dolor de siempre, a tenerlo resuelto.</h2>
+      <p>Estos son los problemas que nos contaron los franquiciatarios — y cómo Livora los deja atrás.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pr-row"><div class="pr-ic pain">!</div><div><div class="pr-lbl pain">El dolor</div><div class="pr-txt">"No sabíamos cuántos hallazgos teníamos en las farmacias. Llegaban los supervisores externos, los encontraban y nos <b>multaban</b>."</div></div></div>
+        <div class="pr-div"><span class="ln"></span><span class="dw">con Livora</span><span class="ln"></span></div>
+        <div class="pr-row"><div class="pr-ic sol">✓</div><div><div class="pr-lbl sol">Cómo se resuelve</div><div class="pr-txt">Tú haces tus propias revisiones y <b>ves los hallazgos antes que nadie</b>. Los resuelves a tiempo y dejas de pagar multas.</div></div></div>
+        <span class="pr-tag">Envoy</span>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pr-row"><div class="pr-ic pain">!</div><div><div class="pr-lbl pain">El dolor</div><div class="pr-txt">"El corte del día se hacía a mano y <b>nunca cuadraba</b>. Andábamos persiguiendo reportes por WhatsApp."</div></div></div>
+        <div class="pr-div"><span class="ln"></span><span class="dw">con Livora</span><span class="ln"></span></div>
+        <div class="pr-row"><div class="pr-ic sol">✓</div><div><div class="pr-lbl sol">Cómo se resuelve</div><div class="pr-txt">El corte <b>se arma solo</b> y los depósitos se cuadran contra el efectivo. Se acabó perseguir números.</div></div></div>
+        <span class="pr-tag">Embajador → Consul</span>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pr-row"><div class="pr-ic pain">!</div><div><div class="pr-lbl pain">El dolor</div><div class="pr-txt">"No sabíamos qué sucursal vendía bien y cuál se estaba <b>quedando atrás</b> hasta fin de mes."</div></div></div>
+        <div class="pr-div"><span class="ln"></span><span class="dw">con Livora</span><span class="ln"></span></div>
+        <div class="pr-row"><div class="pr-ic sol">✓</div><div><div class="pr-lbl sol">Cómo se resuelve</div><div class="pr-txt">Ves la venta de cada farmacia contra su meta <b>al momento</b>, y actúas donde hace falta.</div></div></div>
+        <span class="pr-tag">Envoy</span>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pr-row"><div class="pr-ic pain">!</div><div><div class="pr-lbl pain">El dolor</div><div class="pr-txt">"Los gastos llegaban en papelitos y fotos sueltas; era <b>imposible ordenarlos</b> por sucursal."</div></div></div>
+        <div class="pr-div"><span class="ln"></span><span class="dw">con Livora</span><span class="ln"></span></div>
+        <div class="pr-row"><div class="pr-ic sol">✓</div><div><div class="pr-lbl sol">Cómo se resuelve</div><div class="pr-txt">Cada gasto se reporta con <b>foto del comprobante</b> y queda ordenado por tipo y por farmacia.</div></div></div>
+        <span class="pr-tag">Embajador</span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="group-label reveal">
-      <span class="eyebrow" style="color:var(--emerald)">Frente financiero</span>
+      <span class="eyebrow" style="color:var(--emerald)">El dinero</span>
       <h2>Del mostrador a la dirección.</h2>
-      <p>El dinero de cada farmacia, capturado sin recaptura en la sucursal y consolidado para gerencia.</p>
+      <p>Las ventas y los gastos de cada farmacia se registran en la sucursal y llegan solos a dirección, sin volver a capturarlos.</p>
     </div>
 
     <div class="product reveal" id="embajador">
@@ -355,14 +435,14 @@
         <div class="p-main">
           <span class="role"><span class="rd"></span><span class="eyebrow">En el mostrador</span></span>
           <h3 class="p-name">Embajador</h3>
-          <div class="p-tag">El punto de captura en cada farmacia.</div>
-          <p class="p-desc">La app que usa el personal de sucursal para cerrar el día, reportar gastos y registrar la operación. La información fluye del punto de venta a la plataforma, sin recaptura.</p>
+          <div class="p-tag">La app del día a día en la farmacia.</div>
+          <p class="p-desc">La usa el personal de la sucursal para cerrar el día, reportar gastos y llevar la operación. Lo que pasa en el mostrador llega solo a la plataforma, sin recapturar nada.</p>
           <ul class="feat">
-            <li><span class="fn">01</span><span class="ft"><b>Reporteo automático desde el punto de venta</b>: las ventas se sincronizan solas cada 10 minutos, sin captura manual.</span></li>
-            <li><span class="fn">02</span><span class="ft"><b>Lectura de recibos con IA</b> — OCR entrenado a la medida, con corrección manual asistida.</span></li>
-            <li><span class="fn">03</span><span class="ft"><b>Cierre diario guiado</b> con validación de cifras y carga de la tira de cada terminal.</span></li>
-            <li><span class="fn">04</span><span class="ft"><b>Reporte de gastos</b> por categoría, con evidencia fotográfica.</span></li>
-            <li><span class="fn">05</span><span class="ft"><b>Check-in / check-out</b> con reconocimiento facial.</span></li>
+            <li><span class="fn">01</span><span class="ft"><b>Las ventas se registran solas</b>: se actualizan cada pocos minutos, sin capturar a mano.</span></li>
+            <li><span class="fn">02</span><span class="ft"><b>Los recibos se leen con foto</b>: tomas la foto y Livora saca los datos por ti.</span></li>
+            <li><span class="fn">03</span><span class="ft"><b>Cierre del día paso a paso</b>, que revisa que las cifras cuadren.</span></li>
+            <li><span class="fn">04</span><span class="ft"><b>Gastos con foto de comprobante</b>, ordenados por tipo.</span></li>
+            <li><span class="fn">05</span><span class="ft"><b>Entrada y salida del personal</b> con reconocimiento facial.</span></li>
           </ul>
           <span class="p-where">App instalada en sucursal</span>
         </div>
@@ -375,14 +455,14 @@
         <div class="p-main">
           <span class="role"><span class="rd"></span><span class="eyebrow">En la dirección</span></span>
           <h3 class="p-name">Consul</h3>
-          <div class="p-tag">La plataforma de dirección de toda la cadena.</div>
-          <p class="p-desc">La plataforma web donde la dirección ve la cadena completa: ingresos, gastos, conciliación bancaria y flujo de efectivo, todo consolidado y filtrable por sucursal.</p>
+          <div class="p-tag">La vista completa para dirección.</div>
+          <p class="p-desc">La pantalla desde donde dirección ve toda la cadena: cuánto entra, cuánto sale, qué depósitos cuadran y cuánto efectivo hay disponible. Todo junto y filtrable por sucursal.</p>
           <ul class="feat">
-            <li><span class="fn">01</span><span class="ft"><b>Consolidación de ingresos y gastos</b> de todas las sucursales.</span></li>
-            <li><span class="fn">02</span><span class="ft"><b>Conciliación automática de depósitos</b> contra el efectivo, sobre varias cuentas bancarias.</span></li>
-            <li><span class="fn">03</span><span class="ft"><b>Panel diario de flujo de efectivo</b> con lo disponible para depositar.</span></li>
-            <li><span class="fn">04</span><span class="ft"><b>Histórico de ventas y registro de tickets</b> a nivel transacción.</span></li>
-            <li><span class="fn">05</span><span class="ft"><b>Panel de adopción y uso</b> por sucursal.</span></li>
+            <li><span class="fn">01</span><span class="ft"><b>Todo lo que entra y sale</b>, sumado de todas las sucursales.</span></li>
+            <li><span class="fn">02</span><span class="ft"><b>Revisa que los depósitos cuadren</b> con el efectivo, en todas tus cuentas.</span></li>
+            <li><span class="fn">03</span><span class="ft"><b>Cuánto efectivo tienes hoy</b> y cuánto hay listo para depositar.</span></li>
+            <li><span class="fn">04</span><span class="ft"><b>Historial de ventas</b> hasta el detalle de cada ticket.</span></li>
+            <li><span class="fn">05</span><span class="ft"><b>Quién está usando Livora</b> en cada sucursal.</span></li>
           </ul>
           <span class="p-where">Plataforma web administrativa</span>
         </div>
@@ -395,9 +475,9 @@
 <section>
   <div class="wrap">
     <div class="group-label reveal">
-      <span class="eyebrow" style="color:var(--brass-deep)">Frente de cumplimiento y desempeño</span>
+      <span class="eyebrow" style="color:var(--brass-deep)">La operación</span>
       <h2>La operación de piso, bajo control.</h2>
-      <p>Auditar que cada farmacia cumpla, y medir que cada una venda contra su meta.</p>
+      <p>Revisa que cada farmacia haga bien las cosas y ve cuáles están llegando a su meta de venta.</p>
     </div>
 
     <div class="product core reveal" id="envoy">
@@ -405,14 +485,14 @@
         <div class="p-main">
           <span class="role"><span class="rd"></span><span class="eyebrow" style="color:var(--brass-deep)">Auditoría · Cumplimiento · Desempeño</span></span>
           <h3 class="p-name">Envoy</h3>
-          <div class="p-tag">Auditoría de piso y desempeño comercial de toda la red.</div>
-          <p class="p-desc">El sistema que audita el cumplimiento normativo de cada farmacia y mide su desempeño de venta contra metas, con auditorías y hallazgos en seguimiento hasta cerrarse.</p>
+          <div class="p-tag">Supervisión y metas de toda la red.</div>
+          <p class="p-desc">Revisa que cada farmacia cumpla con lo que debe y mide cómo va su venta frente a la meta. Lo que sale mal queda anotado y en seguimiento hasta que se resuelve.</p>
           <ul class="feat">
-            <li><span class="fn">01</span><span class="ft"><b>Auditorías y supervisiones guiadas</b>, con checklist de cumplimiento por concepto.</span></li>
-            <li><span class="fn">02</span><span class="ft"><b>Tablero de hallazgos tipo kanban</b>, por severidad y estado, con seguimiento hasta el cierre.</span></li>
-            <li><span class="fn">03</span><span class="ft"><b>Metas comerciales por sucursal</b>: venta real vs. proyección vs. meta.</span></li>
-            <li><span class="fn">04</span><span class="ft"><b>Evaluación de desempeño</b> por vendedor, farmacia o zona, con mezcla de venta.</span></li>
-            <li><span class="fn">05</span><span class="ft"><b>Control de faltantes de inventario y multas</b> por vendedor.</span></li>
+            <li><span class="fn">01</span><span class="ft"><b>Supervisiones con lista de verificación</b>, para no saltarse nada.</span></li>
+            <li><span class="fn">02</span><span class="ft"><b>Los pendientes en un tablero</b>, ordenados por qué tan urgentes son, hasta cerrarlos.</span></li>
+            <li><span class="fn">03</span><span class="ft"><b>La meta de cada sucursal</b>: lo que vendió contra lo que se esperaba.</span></li>
+            <li><span class="fn">04</span><span class="ft"><b>Cómo va cada vendedor</b>, farmacia o zona, y qué está vendiendo.</span></li>
+            <li><span class="fn">05</span><span class="ft"><b>Faltantes de inventario y multas</b> por vendedor.</span></li>
           </ul>
           <span class="p-where">Sistema de auditoría y desempeño · en uso diario</span>
         </div>
@@ -429,16 +509,49 @@
     <div class="eco-cols">
       <div class="eco-card reveal">
         <div class="tag">El dinero</div>
-        <h3>Circuito financiero</h3>
-        <p>Del mostrador a la dirección: la venta y los gastos se capturan en sucursal y se consolidan y concilian para gerencia, sin recaptura.</p>
+        <h3>El dinero, ordenado</h3>
+        <p>Del mostrador a la dirección: las ventas y los gastos se registran en la sucursal y llegan sumados y cuadrados para dirección, sin recapturar.</p>
         <div class="pair">Embajador → Consul</div>
       </div>
       <div class="eco-card reveal">
         <div class="tag">La operación</div>
-        <h3>Cumplimiento y desempeño</h3>
-        <p>Auditoría normativa de piso y medición de metas comerciales por farmacia, vendedor y zona, con hallazgos en seguimiento hasta cerrarse.</p>
+        <h3>La operación, bajo control</h3>
+        <p>Revisas que cada farmacia cumpla y ves cómo va su venta por sucursal, vendedor y zona. Lo que sale mal queda en seguimiento hasta resolverse.</p>
         <div class="pair">Envoy</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <div class="wrap">
+    <div class="g-head reveal">
+      <span class="eyebrow">Livora en la farmacia</span>
+      <h2>Así se ve, del mostrador al piso.</h2>
+      <p>Una misma plataforma acompaña cada momento del día en tus sucursales.</p>
+    </div>
+    <div class="carousel reveal" id="carousel">
+      <div class="car-track" id="carTrack">
+        <div class="slide">
+          <img src="assets/hero.png" alt="Farmacéutico atendiendo con tablet" loading="lazy">
+          <div class="cap"><div class="ck">En el mostrador</div><div class="ct">Cada venta y cada gasto quedan registrados al momento.</div></div>
+        </div>
+        <div class="slide">
+          <img src="assets/carousel-1.png" alt="Pasillo de farmacia" loading="lazy">
+          <div class="cap"><div class="ck">En piso</div><div class="ct">Todo tu inventario y tu operación, siempre a la vista.</div></div>
+        </div>
+        <div class="slide">
+          <img src="assets/carousel-2.png" alt="Cobro con terminal y tablet" loading="lazy">
+          <div class="cap"><div class="ck">En caja</div><div class="ct">El corte del día se arma solo, sin recapturar nada.</div></div>
+        </div>
+        <div class="slide">
+          <img src="assets/carousel-3.png" alt="Supervisor revisando en tablet" loading="lazy">
+          <div class="cap"><div class="ck">En supervisión</div><div class="ct">Revisas que cada farmacia cumpla, desde donde estés.</div></div>
+        </div>
+      </div>
+      <button class="car-btn prev" id="carPrev" aria-label="Anterior">‹</button>
+      <button class="car-btn next" id="carNext" aria-label="Siguiente">›</button>
+      <div class="car-dots" id="carDots"></div>
     </div>
   </div>
 </section>
@@ -447,17 +560,17 @@
   <div class="wrap">
     <span class="eyebrow">En operación</span>
     <h2>Cadenas que ya operan con Livora.</h2>
-    <p class="sub">De la suite completa a un solo frente: cada cadena adopta Livora al ritmo que necesita.</p>
+    <p class="sub">Cada cadena empieza con lo que necesita: unas usan todo Livora, otras solo una parte.</p>
     <div class="client-cols">
       <div class="client-card reveal">
         <div class="c-top"><span class="c-name">Gardomi</span><span class="c-scale">~86 farmacias</span></div>
         <div class="c-prods"><span class="pp on">Embajador</span><span class="pp on">Consul</span><span class="pp on">Envoy</span></div>
-        <p class="c-line">Suite completa en uso diario: captura financiera en sucursal, consolidación para dirección y auditoría de desempeño de toda la red.</p>
+        <p class="c-line">Usan todo Livora a diario: el dinero de cada sucursal, la vista para dirección y la supervisión de toda la red.</p>
       </div>
       <div class="client-card reveal">
         <div class="c-top"><span class="c-name">Bustillos</span><span class="c-scale">26 farmacias</span></div>
         <div class="c-prods"><span class="pp">Embajador</span><span class="pp">Consul</span><span class="pp on">Envoy</span></div>
-        <p class="c-line">Usa Envoy para la auditoría de piso y el desempeño comercial de sus 26 sucursales.</p>
+        <p class="c-line">Usan Envoy para supervisar y medir la venta de sus 26 sucursales.</p>
       </div>
     </div>
   </div>
@@ -490,8 +603,8 @@
 <section class="cta" id="contacto">
   <div class="wrap">
     <span class="eyebrow">Livora para tu cadena</span>
-    <h2>Toma el control de toda tu operación.</h2>
-    <p>Agenda una demostración y conoce cómo Livora conecta el dinero y la operación de cada sucursal en una sola plataforma.</p>
+    <h2>Toma el control de toda tu cadena.</h2>
+    <p>Agenda una demostración y te mostramos cómo Livora junta el dinero y la operación de todas tus farmacias en un solo lugar.</p>
     <a href="mailto:dm_pc@live.com?subject=Demo%20de%20Livora" class="btn">Solicitar una demostración</a>
   </div>
 </section>
@@ -532,6 +645,24 @@
       window.addEventListener('scroll',onScroll,{passive:true});
       window.addEventListener('resize',onScroll,{passive:true});
       apply();
+    }
+
+    // carrusel
+    var track=document.getElementById('carTrack');
+    if(track){
+      var slides=track.children, n=slides.length, i=0, timer=null;
+      var dotsWrap=document.getElementById('carDots'), dots=[];
+      for(var d=0;d<n;d++){(function(k){var b=document.createElement('button');b.className=(k===0?'on':'');b.setAttribute('aria-label','Ir a '+(k+1));b.onclick=function(){go(k);reset();};dotsWrap.appendChild(b);dots.push(b);})(d);}
+      function go(k){i=(k+n)%n;track.style.transform='translateX(-'+(i*100)+'%)';for(var j=0;j<dots.length;j++){dots[j].className=(j===i?'on':'');}}
+      function next(){go(i+1);}function prev(){go(i-1);}
+      function start(){if(!reduce){timer=setInterval(next,5000);}}
+      function reset(){clearInterval(timer);start();}
+      document.getElementById('carNext').onclick=function(){next();reset();};
+      document.getElementById('carPrev').onclick=function(){prev();reset();};
+      var car=document.getElementById('carousel');
+      car.addEventListener('mouseenter',function(){clearInterval(timer);});
+      car.addEventListener('mouseleave',start);
+      start();
     }
   })();
 </script>
